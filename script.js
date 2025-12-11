@@ -62,7 +62,7 @@ formCommande.addEventListener('submit', (e) => {
     const tel = formCommande.tel.value;
     const adresse = formCommande.adresse.value;
 
-    let message = `Commande MOYA Parts:\nNom: ${nom}\nTel: ${tel}\nAdresse: ${adresse}\nProduits:\n`;
+    let message = `Commande ABDO Parts:\nNom: ${nom}\nTel: ${tel}\nAdresse: ${adresse}\nProduits:\n`;
     panier.forEach(p => {
         message += `- ${p.nom} x${p.quantite} = ${p.prix * p.quantite} MAD\n`;
     });

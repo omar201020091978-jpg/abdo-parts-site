@@ -1,236 +1,279 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABDO Parts - Pièces Auto</title>
-    <meta name="description" content="ABDO Parts, votre boutique de pièces auto en ligne.">
-    <meta name="google-site-verification" content="P9OCE9ZNlYq90kWLbUC7VOkxUVgMbHpVKTGQhLT9C3o" />
-    <style>
-        body { font-family: Arial, sans-serif; background-color:#111; color:#fff; margin:0; padding:0;}
-        header { text-align:center; padding:20px; background-color:#222;}
-        header img.logo { width:100px; display:block; margin:0 auto; }
-        section#menu { padding:20px; background-color:#1a1a1a; }
-        section#menu h2 { text-align:center; color:#f00; margin-bottom:20px;}
-        .item { display:inline-block; width:200px; margin:10px; text-align:center; background-color:#222; border-radius:10px; padding:10px; transition: transform 0.3s, box-shadow 0.3s; }
-        .item img { width:150px; height:150px; border-radius:10px; margin-bottom:10px; }
-        .item button.commander { padding:5px 10px; background:#f00; color:#fff; border:none; border-radius:5px; cursor:pointer; }
-        .item:hover { transform: scale(1.05); box-shadow: 0 0 10px #f00; }
-        .panier { background:#222; padding:20px; margin:20px auto; width:90%; max-width:600px; border-radius:10px;}
-        .panier h2 { color:#f00; text-align:center;}
-        .panier-item { display:flex; justify-content:space-between; margin-bottom:10px; }
-        .panier-item button.supprimer { background:#555; color:#fff; border:none; border-radius:5px; cursor:pointer; }
-        #viderPanier { background:#f00; color:#fff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; margin-top:10px; display:block; }
-        #formCommande { background:#222; padding:20px; margin:20px auto; width:90%; max-width:600px; border-radius:10px; }
-        #formCommande h2 { color:#f00; text-align:center; margin-bottom:20px;}
-        #formCommande label { display:block; margin-top:10px; }
-        #formCommande input, #formCommande textarea { width:100%; padding:5px; margin-top:5px; border-radius:5px; border:none; }
-        #formCommande button { margin-top:10px; background:#f00; color:#fff; border:none; padding:10px; border-radius:5px; cursor:pointer; width:100%; }
-        footer { text-align:center; padding:20px; background-color:#222; margin-top:20px;}
-        footer a { color:#f00; text-decoration:none; }
-        iframe { margin-top:20px; border-radius:10px; width:100%; max-width:600px; height:450px; border:0; }
-        @media (max-width:600px){
-            .item { width:45%; }
-            .panier, #formCommande { width:95%; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABDO Parts - Pièces Auto</title>
+<meta name="description" content="ABDO Parts, votre boutique de pièces auto en ligne.">
+<meta name="google-site-verification" content="P9OCE9ZNlYq90kWLbUC7VOkxUVgMbHpVKTGQhLT9C3o" />
+<style>
+body { font-family: Arial, sans-serif; background-color:#111; color:#fff; margin:0; padding:0;}
+header { text-align:center; padding:20px; background-color:#222;}
+header img.logo { width:100px; display:block; margin:0 auto; }
+section#menu { padding:20px; background-color:#1a1a1a; }
+section#menu h2 { text-align:center; color:#f00; margin-bottom:20px;}
+.item { display:inline-block; width:200px; margin:10px; text-align:center; background-color:#222; border-radius:10px; padding:10px; transition: transform 0.3s, box-shadow 0.3s; }
+.item img { width:150px; height:150px; border-radius:10px; margin-bottom:10px; }
+.item button.commander { padding:5px 10px; background:#f00; color:#fff; border:none; border-radius:5px; cursor:pointer; }
+.item:hover { transform: scale(1.05); box-shadow: 0 0 10px #f00; }
+.panier { background:#222; padding:20px; margin:20px auto; width:90%; max-width:600px; border-radius:10px;}
+.panier h2 { color:#f00; text-align:center;}
+.panier-item { display:flex; justify-content:space-between; margin-bottom:10px; }
+.panier-item button.supprimer { background:#555; color:#fff; border:none; border-radius:5px; cursor:pointer; }
+#viderPanier { background:#f00; color:#fff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; margin-top:10px; display:block; }
+#formCommande { background:#222; padding:20px; margin:20px auto; width:90%; max-width:600px; border-radius:10px; }
+#formCommande h2 { color:#f00; text-align:center; margin-bottom:20px;}
+#formCommande label { display:block; margin-top:10px; }
+#formCommande input, #formCommande textarea { width:100%; padding:5px; margin-top:5px; border-radius:5px; border:none; }
+#formCommande button { margin-top:10px; background:#f00; color:#fff; border:none; padding:10px; border-radius:5px; cursor:pointer; width:100%; }
+footer { text-align:center; padding:20px; background-color:#222; margin-top:20px;}
+footer a { color:#f00; text-decoration:none; }
+iframe { margin-top:20px; border-radius:10px; width:100%; max-width:600px; height:450px; border:0; }
+@media (max-width:600px){
+    .item { width:45%; }
+    .panier, #formCommande { width:95%; }
+}
+</style>
 </head>
 <body>
-   <header>
-    
-
-    <!-- Logo -->
+<header>
     <img src="images/logo.png" alt="Logo ABDO Parts" class="logo">
-
-    <!-- Titre du site -->
     <h1>ABDO Parts - Pièces Auto</h1>
-    <!-- Bannière -->
-    <img src="images/banniere.png" alt="Bannière ABDO Parts" class="banniere">
 </header>
 
+<section id="menu">
+    <h2>Notre Catalogue de Produits</h2>
 
-
-    <section id="menu">
-        <h2>Notre Catalogue de Produits</h2>
-
-        <div class="item" data-nom="Airbag" data-prix="1200">
-            <img src="images/airbag.jpg" alt="Airbag">
-            <h3>Airbag</h3>
-            <p>Prix : 1200 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Amortisseur" data-prix="850">
-            <img src="images/amortisseur.jpg" alt="Amortisseur">
-            <h3>Amortisseur</h3>
-            <p>Prix : 850 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Batterie" data-prix="1200">
-            <img src="images/batterie.jpg" alt="Batterie">
-            <h3>Batterie</h3>
-            <p>Prix : 1200 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Huile" data-prix="300">
-            <img src="images/huile.jpg" alt="Huile">
-            <h3>Huile</h3>
-            <p>Prix : 300 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Filtre" data-prix="250">
-            <img src="images/filtre.jpg" alt="Filtre">
-            <h3>Filtre</h3>
-            <p>Prix : 250 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Bougie" data-prix="100">
-            <img src="images/bougie.jpg" alt="Bougie">
-            <h3>Bougie</h3>
-            <p>Prix : 100 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Disque" data-prix="400">
-            <img src="images/disque.jpg" alt="Disque">
-            <h3>Disque</h3>
-            <p>Prix : 400 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Embrayage" data-prix="900">
-            <img src="images/embrayage.jpg" alt="Embrayage">
-            <h3>Embrayage</h3>
-            <p>Prix : 900 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Pneu" data-prix="1000">
-            <img src="images/pneu.jpg" alt="Pneu">
-            <h3>Pneu</h3>
-            <p>Prix : 1000 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <div class="item" data-nom="Roulement" data-prix="600">
-            <img src="images/roulement.jpg" alt="Roulement">
-            <h3>Roulement</h3>
-            <p>Prix : 600 MAD</p>
-            <button class="commander">Ajouter au panier</button>
-        </div>
-
-        <!-- Ajoute ici les autres produits comme Radiateur, Volant, Pare-choc, Feu avant/arrière, Essuie-glace, Frein, Frein ABS, Frein à main -->
-    </section>
-
-    <div class="panier">
-        <h2>Votre Panier</h2>
-        <div class="panier-items"></div>
-        <div class="total">Total : 0 MAD</div>
-        <button id="viderPanier">Vider le panier</button>
+    <div class="item" data-nom="Airbag" data-prix="1200">
+        <img src="images/airbag.jpg" alt="Airbag">
+        <h3>Airbag</h3>
+        <p>Prix : 1200 MAD</p>
+        <button class="commander">Ajouter au panier</button>
     </div>
 
-    <form id="formCommande">
-        <h2>Passer une commande</h2>
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
+    <div class="item" data-nom="Amortisseur" data-prix="850">
+        <img src="images/amortisseur.jpg" alt="Amortisseur">
+        <h3>Amortisseur</h3>
+        <p>Prix : 850 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-        <label for="tel">Téléphone :</label>
-        <input type="tel" id="tel" name="tel" required>
+    <div class="item" data-nom="Batterie" data-prix="1200">
+        <img src="images/batterie.jpg" alt="Batterie">
+        <h3>Batterie</h3>
+        <p>Prix : 1200 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-        <label for="adresse">Adresse :</label>
-        <input type="text" id="adresse" name="adresse" required>
+    <div class="item" data-nom="Huile" data-prix="300">
+        <img src="images/huile.jpg" alt="Huile">
+        <h3>Huile</h3>
+        <p>Prix : 300 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-        <button type="submit">Envoyer la commande</button>
-    </form>
+    <div class="item" data-nom="Filtre à air" data-prix="250">
+        <img src="images/filtre.jpg" alt="Filtre">
+        <h3>Filtre à air</h3>
+        <p>Prix : 250 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-    <footer>
-        <p>Contactez-nous : <a href="https://wa.me/0610601753">0610601753 (WhatsApp)</a></p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.244695433488!2d-6.568232525234138!3d34.267811906318485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda75933a99a15d5%3A0x5f86304f74157872!2sMOYAParts%20Pi%C3%A8ces%20auto!5e0!3m2!1sfr!2s!4v1765384069243!5m2!1sfr!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </footer>
+    <div class="item" data-nom="Bougie" data-prix="100">
+        <img src="images/bougie.jpg" alt="Bougie">
+        <h3>Bougie</h3>
+        <p>Prix : 100 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-    <script>
-        const panierItems = document.querySelector('.panier-items');
-        const totalDisplay = document.querySelector('.total');
-        const viderPanierBtn = document.getElementById('viderPanier');
+    <div class="item" data-nom="Disque" data-prix="400">
+        <img src="images/disque.jpg" alt="Disque">
+        <h3>Disque</h3>
+        <p>Prix : 400 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-        let panier = [];
+    <div class="item" data-nom="Embrayage" data-prix="900">
+        <img src="images/embrayage.jpg" alt="Embrayage">
+        <h3>Embrayage</h3>
+        <p>Prix : 900 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-        // Ajouter au panier
-        document.querySelectorAll('.commander').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                const itemDiv = e.target.closest('.item');
-                const nom = itemDiv.dataset.nom;
-                const prix = parseInt(itemDiv.dataset.prix);
+    <div class="item" data-nom="Pneu" data-prix="1000">
+        <img src="images/pneu.jpg" alt="Pneu">
+        <h3>Pneu</h3>
+        <p>Prix : 1000 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-                const exist = panier.find(p => p.nom === nom);
-                if (exist) {
-                    exist.quantite += 1;
-                } else {
-                    panier.push({ nom, prix, quantite: 1 });
-                }
-                afficherPanier();
-            });
-        });
+    <div class="item" data-nom="Roulement" data-prix="600">
+        <img src="images/roulement.jpg" alt="Roulement">
+        <h3>Roulement</h3>
+        <p>Prix : 600 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-        // Afficher le panier
-        function afficherPanier() {
-            panierItems.innerHTML = '';
-            let total = 0;
-            panier.forEach(p => {
-                total += p.prix * p.quantite;
-                const div = document.createElement('div');
-                div.classList.add('panier-item');
-                div.innerHTML = `
-                    <span>${p.nom} x${p.quantite}</span>
-                    <span>${p.prix * p.quantite} MAD</span>
-                    <button class="supprimer">Supprimer</button>
-                `;
-                div.querySelector('.supprimer').addEventListener('click', () => {
-                    panier = panier.filter(item => item.nom !== p.nom);
-                    afficherPanier();
-                });
-                panierItems.appendChild(div);
-            });
-            totalDisplay.textContent = `Total : ${total} MAD`;
-        }
+    <div class="item" data-nom="Radiateur" data-prix="700">
+        <img src="images/radiateur.jpg" alt="Radiateur">
+        <h3>Radiateur</h3>
+        <p>Prix : 700 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
 
-        // Vider le panier
-        viderPanierBtn.addEventListener('click', () => {
-            panier = [];
+    <div class="item" data-nom="Volant" data-prix="450">
+        <img src="images/volant.jpg" alt="Volant">
+        <h3>Volant</h3>
+        <p>Prix : 450 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+    <div class="item" data-nom="Pare-choc" data-prix="800">
+        <img src="images/pare_choc.jpg" alt="Pare-choc">
+        <h3>Pare-choc</h3>
+        <p>Prix : 800 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+    <div class="item" data-nom="Feu avant" data-prix="500">
+        <img src="images/feu_avant.jpg" alt="Feu avant">
+        <h3>Feu avant</h3>
+        <p>Prix : 500 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+    <div class="item" data-nom="Feu arrière" data-prix="450">
+        <img src="images/feu_arriere.jpg" alt="Feu arrière">
+        <h3>Feu arrière</h3>
+        <p>Prix : 450 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+    <div class="item" data-nom="Essuie-glace" data-prix="150">
+        <img src="images/essuie_glace.jpg" alt="Essuie-glace">
+        <h3>Essuie-glace</h3>
+        <p>Prix : 150 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+    <div class="item" data-nom="Frein" data-prix="400">
+        <img src="images/frein.jpg" alt="Frein">
+        <h3>Frein</h3>
+        <p>Prix : 400 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+    <div class="item" data-nom="Frein ABS" data-prix="600">
+        <img src="images/frein_abs.jpg" alt="Frein ABS">
+        <h3>Frein ABS</h3>
+        <p>Prix : 600 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+    <div class="item" data-nom="Frein à main" data-prix="300">
+        <img src="images/frein_main.jpg" alt="Frein à main">
+        <h3>Frein à main</h3>
+        <p>Prix : 300 MAD</p>
+        <button class="commander">Ajouter au panier</button>
+    </div>
+
+</section>
+
+<div class="panier">
+    <h2>Votre Panier</h2>
+    <div class="panier-items"></div>
+    <div class="total">Total : 0 MAD</div>
+    <button id="viderPanier">Vider le panier</button>
+</div>
+
+<form id="formCommande">
+    <h2>Passer une commande</h2>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
+
+    <label for="tel">Téléphone :</label>
+    <input type="tel" id="tel" name="tel" required>
+
+    <label for="adresse">Adresse :</label>
+    <input type="text" id="adresse" name="adresse" required>
+
+    <button type="submit">Envoyer la commande</button>
+</form>
+
+<footer>
+    <p>Contactez-nous : <a href="https://wa.me/0610601753">0610601753 (WhatsApp)</a></p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.244695433488!2d-6.568232525234138!3d34.267811906318485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda75933a99a15d5%3A0x5f86304f74157872!2sMOYAParts%20Pi%C3%A8ces%20auto!5e0!3m2!1sfr!2s!4v1765384069243!5m2!1sfr!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</footer>
+
+<script>
+const panierItems = document.querySelector('.panier-items');
+const totalDisplay = document.querySelector('.total');
+const viderPanierBtn = document.getElementById('viderPanier');
+
+let panier = [];
+
+// Ajouter au panier
+document.querySelectorAll('.commander').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        const itemDiv = e.target.closest('.item');
+        const nom = itemDiv.dataset.nom;
+        const prix = parseInt(itemDiv.dataset.prix);
+
+        const exist = panier.find(p => p.nom === nom);
+        if (exist) { exist.quantite += 1; } 
+        else { panier.push({ nom, prix, quantite: 1 }); }
+        afficherPanier();
+    });
+});
+
+// Afficher le panier
+function afficherPanier() {
+    panierItems.innerHTML = '';
+    let total = 0;
+    panier.forEach(p => {
+        total += p.prix * p.quantite;
+        const div = document.createElement('div');
+        div.classList.add('panier-item');
+        div.innerHTML = `
+            <span>${p.nom} x${p.quantite}</span>
+            <span>${p.prix * p.quantite} MAD</span>
+            <button class="supprimer">Supprimer</button>
+        `;
+        div.querySelector('.supprimer').addEventListener('click', () => {
+            panier = panier.filter(item => item.nom !== p.nom);
             afficherPanier();
         });
+        panierItems.appendChild(div);
+    });
+    totalDisplay.textContent = `Total : ${total} MAD`;
+}
 
-        // Formulaire WhatsApp
-        const formCommande = document.getElementById('formCommande');
-        formCommande.addEventListener('submit', (e) => {
-            e.preventDefault();
-            if (panier.length === 0) {
-                alert("Votre panier est vide !");
-                return;
-            }
+// Vider le panier
+viderPanierBtn.addEventListener('click', () => { panier = []; afficherPanier(); });
 
-            const nom = formCommande.nom.value;
-            const tel = formCommande.tel.value;
-            const adresse = formCommande.adresse.value;
+// Formulaire WhatsApp
+const formCommande = document.getElementById('formCommande');
+formCommande.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (panier.length === 0) { alert("Votre panier est vide !"); return; }
 
-            let message = `Commande ABDO Parts:\nNom: ${nom}\nTel: ${tel}\nAdresse: ${adresse}\nProduits:\n`;
-            panier.forEach(p => {
-                message += `- ${p.nom} x${p.quantite} = ${p.prix * p.quantite} MAD\n`;
-            });
-            message += `Total: ${panier.reduce((sum, p) => sum + p.prix * p.quantite, 0)} MAD`;
+    const nom = formCommande.nom.value;
+    const tel = formCommande.tel.value;
+    const adresse = formCommande.adresse.value;
 
-            const encodedMessage = encodeURIComponent(message);
-            const numero = "212610601753"; // numéro WhatsApp international
+    let message = `Commande ABDO Parts:\nNom: ${nom}\nTel: ${tel}\nAdresse: ${adresse}\nProduits:\n`;
+    panier.forEach(p => { message += `- ${p.nom} x${p.quantite} = ${p.prix * p.quantite} MAD\n`; });
+    message += `Total: ${panier.reduce((sum, p) => sum + p.prix * p.quantite, 0)} MAD`;
 
-            window.open(`https://wa.me/${numero}?text=${encodedMessage}`, '_blank');
-        });
-    </script>
+    const encodedMessage = encodeURIComponent(message);
+    const numero = "212610601753"; // numéro WhatsApp international
+
+    window.open(`https://wa.me/${numero}?text=${encodedMessage}`, '_blank');
+});
+</script>
 </body>
 </html>
+
 
 
 
